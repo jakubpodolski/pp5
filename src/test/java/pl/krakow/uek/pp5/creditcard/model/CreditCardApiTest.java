@@ -2,6 +2,7 @@ package pl.krakow.uek.pp5.creditcard.model;
 
 import org.junit.Assert;
 import org.junit.Test;
+import pl.krakow.uek.pp5.creditcard.model.model.CreditCardFacade;
 
 import java.math.BigDecimal;
 

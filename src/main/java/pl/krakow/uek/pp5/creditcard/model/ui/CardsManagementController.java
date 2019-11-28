@@ -1,9 +1,9 @@
-package pl.krakow.uek.pp5.qwark97.creditcard.ui;
+package pl.krakow.uek.pp5.creditcard.model.ui;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pl.krakow.uek.pp5.qwark97.creditcard.model.CreditCardDetailsDto;
+import pl.krakow.uek.pp5.creditcard.model.model.CreditCardDetailsDto;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
