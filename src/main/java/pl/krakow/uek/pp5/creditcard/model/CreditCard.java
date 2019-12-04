@@ -7,8 +7,8 @@ import java.math.BigDecimal;
 
 public class CreditCard {
     String cardNumber;
-    private BigDecimal creditLimit;
-    private String slogan;
+    private BigDecimal limit;
+    private String ownerName;
     private BigDecimal currentBalance;
 
     public CreditCard(String cardNumber) {
@@ -19,12 +19,11 @@ public class CreditCard {
         if (BigDecimal.valueOf(100).compareTo(newLimit) == 1) {
             throw new CreditBelowMinimumException();
         }
-        creditLimit = newLimit;
-        currentBalance = creditLimit;
+        limit = newLimit;
     }
 
     public BigDecimal getLimit() {
-        return creditLimit;
+        return limit;
     }
 
     public void withdraw(BigDecimal money) {
@@ -37,5 +36,17 @@ public class CreditCard {
 
     public BigDecimal currentBalance() {
         return currentBalance;
+    }
+
+    public void addOwner(String owner) {
+        ownerName = owner;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        currentBalance = balance;
+    }
+
+    public CreditCardDetailsDto details() {
+        return new CreditCardDetailsDto(cardNumber, currentBalance);
     }
 }
